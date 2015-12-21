@@ -1,0 +1,33 @@
+<html>
+<head>
+<script >
+alert("kkkk");
+var mynum=new Array()
+var t
+mynum[0]=1
+mynum[1]=2
+mynum[2]=3
+mynum[3]=4
+console.log(mynum[0])
+console.log(mynum[1])
+console.log(mynum[2])
+console.log(mynum[3])
+for(var i=0; i<mynum.length; i++)
+{
+  for(var j=i+1; j<mynum.length; j++)
+  {
+  t=mynum[i];
+  mynum[i]=mynum[j];
+  mynum[j]=t;
+  }
+  
+}
+console.log(mynum[0])
+console.log(mynum[1])
+console.log(mynum[2])
+console.log(mynum[3])
+</script>
+</head>
+<body>
+</body>
+</html>

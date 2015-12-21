@@ -1,0 +1,5 @@
+<div ng-repeat="notice in notices"
+  drag-to-dismiss="deleteNotice(notice)"
+  class="section section-break">
+  <i id="{{notice.nid}}" class="fa fa-{{notice.icon}}"></i> {{notice.message}}
+</div>

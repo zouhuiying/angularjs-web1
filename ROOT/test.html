@@ -1,0 +1,57 @@
+<html>
+<head>
+<script type="text/javascript" src="jquery.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+//$(document).ready(function(){
+//  $("#send").click(function(){
+//    $('#mydiv').load('a.json');
+//  })
+//}).success{
+//alert('dd')}
+//$(function(){
+ //   $('#send').click(function(){
+function writeObj(obj){ 
+ var description = ""; 
+ for(var i in obj){ 
+  var property=obj[i]; 
+  description+=i+" = "+property+"\n"; 
+ } 
+ return description; 
+}
+function test(){
+//        $.ajax({
+//   		type: "post",     
+//		url: "a.json",
+//    		error: function (e) {
+//     		//	alert('failed');
+//     			alert(writeObj(e));
+//    		},
+//    		success:function(data){ 
+//        		alert('success') 
+//		}
+//  	});
+alert("1");
+$.ajax({
+     url:'http://192.168.139.215:8080/a.json',
+     type:'post',  
+     cache:false,  
+     //dataType:'json',  
+     success:function(data) {  
+	alert(data);
+      },  
+      error : function() {  
+           // view("异常！");  
+           alert("error");  
+      }  
+});
+alert("2");
+   // });
+//});
+}
+</script>
+<input type="button" id="send" value="test" onclick="test()"/>
+<div id="mydiv"></div>
+</body>
+</html>

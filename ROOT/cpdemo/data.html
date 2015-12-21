@@ -1,0 +1,23 @@
+<html>
+<head>
+<script src="/my/jquery-2.1.1.min.js"></script>
+<script type="text/javascript">
+//alert("aaa")
+function sub() {
+$.ajax({
+type: 'get',
+//dataType: 'json',
+url:'http://192.168.139.215:8000/index/',
+success: function(msg) {
+alert(msg)
+},
+error: function() {  alert("failed")}
+})
+}
+</script>
+<body>
+<input type="button" id="wo" name="zou" value="huiying" onclick="sub()"/>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<div ui-content-for="title">
+  <span>Drag</span>
+</div>
+
+<div class="scrollable">
+  <div class="scrollable-header alert alert-info">
+    Drag right to dismiss notices!
+  </div>
+  <div >
+  <input id="serverip" style="width:250px;height:30px" text-align:center type="text"  size="20" class="a-upload"  value="ws://192.168.139.215:8080/websocket/test?mid={{urll.mid}}&yid={{urll.yid}}"/>
+        <input id="conbtn" style="width:50px;height:30px" type="button" ng-click="startServer()" value="open" />
+        <input id="stopbtn" style="width:50px;height:30px" type="button" ng-click="stopconn()" value="stop" disabled="disabled"/>
+        </br>
+        </br>
+        <input id="textMessage" class="a-upload" style="width:250px;height:30px" type="text"  size="20" />
+        <input type="button" style="width:50px;height:30px" ng-click="sendMessage()" value="Send">
+        </br>
+        </br>
+        <div id="loog"></div>
+        </br>
+        </br>
+  </div>
+<div>
+  <input id="aa" ng-model="numbera" />
+  <input type="button" ng-click="cha()" name="cha" value="cha"/>
+  <input type="button" ng-click="consoleng()" name="consoleng" value="consoleng"/>
+</div>
+<div class="scrollable-content">
+  <div class="container-fluid">
+    <div class="notices-container">
+      <div ng-repeat="notice in notices"
+          drag-to-dismiss="deleteNotice(notice)"
+          class="section section-break">
+          <i id="{{notice.nid}}" class="fa fa-{{notice.icon}}"></i> {{notice.message}}
+      </div >
+      <div ng-include="notice.html"-->
+      </div>
+    </div>
+  </div>
+  <br/>
+</div>
+

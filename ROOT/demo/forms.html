@@ -1,0 +1,51 @@
+<div ui-content-for="title">
+  <span>Forms</span>
+</div>
+
+<div class="scrollable">
+ <div class="scrollable-content section">
+   
+  <!--form role="form" ng-submit='login()' action="test.jsp" method="post"-->
+  <form role="form" ng-submit='login()' action="login.jsp" method="post">
+    <fieldset>
+      <legend>Login</legend>
+        <div class="form-group has-success has-feedback">
+          <label>Email</label>
+          <input type="email"
+                 name="email"
+                 ng-model="email"
+                 class="form-control"
+                 placeholder="Enter email">
+        </div>
+        <div>{{url}}
+        </div>
+
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" 
+                 name="password"
+                 class="form-control"
+                 placeholder="Password">
+        </div>
+
+        <div class="form-group">
+          <label>Remember Me</label>
+          <ui-switch 
+            ng-model='rememberMe'></ui-switch>
+        </div>
+    </fieldset>
+    <hr>
+
+    <button class="btn btn-primary btn-block">
+      Login
+    </button>
+<div class="btn-group pull-right" ui-yield-to="navbarAction">
+          <div id="myright" ui-toggle="uiSidebarRight" class="btn">
+            <i class="fa fa-comment"></i> Chatacccaaaa
+          </div>
+    <div ui-content-for="navbarAction"   ui-toggle="uiSidebarRight">
+
+      <a class='btn' ng-click='login()'>Loginnn</a>
+  </form>
+ </div>
+</div>
